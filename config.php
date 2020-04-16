@@ -8,7 +8,7 @@
 
     $autoload = function($class)
     {
-        include('classes/'.$class.'.php');     
+        include('app/models/'.$class.'.php');     
     };
 
     spl_autoload_register($autoload);

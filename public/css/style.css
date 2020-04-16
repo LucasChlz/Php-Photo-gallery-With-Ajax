@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comic Neue', cursive;
+}
+
+html, body {
+    height: 100%;
+    background: black;
+}
+
+nav {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.img-fluid {
+    border: 1px solid white;
+    margin-bottom: 20px;
+}
+
+nav h1 {
+    font-size: 30px;
+    font-weight: normal;
+    color: white;
+}
+
+.line {
+    width: 80%;
+    height: 5px;
+    background: white;
+    margin: 0 auto;
+}  
