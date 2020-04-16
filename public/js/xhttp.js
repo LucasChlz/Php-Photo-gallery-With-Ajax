@@ -1,15 +1,24 @@
 var xhttp = new XMLHttpRequest;
 
-const xmlHttpPost = (url,callback,parameters = '') => {
+const xmlHttpPost = (url,callback,param = '') => {
 
     xhttp.onreadystatechange = callback;
 
     xhttp.open('POST',url+'.php', true);
 
-    if(typeof(parameters) != 'object'){
+    if(typeof(param) != 'object'){
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     }
-    xhttp.send(parameters);
+    xhttp.send(param);
+}
+
+const xmlHttpGet = (url,callback,param = '') => {
+
+    xhttp.onreadystatechange = callback;
+
+    xhttp.open('GET',url+'.php'+param, true);
+    xhttp.send();
+
 }
 
 const beforeSend = (callback) => {

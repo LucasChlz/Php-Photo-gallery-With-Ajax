@@ -20,15 +20,7 @@
 
 <br>
 
-<div class="container">
-    <div class="row">
-
-    <div class="col-sm-4">
-      <img src="img/img1.png" alt="sky" class="img-fluid">
-    </div><!--col-sm-->
-
-  </div><!--row-->
-</div><!--container-->
+<div class="div_img" id="div-img"></div>
 
 <br>
 
