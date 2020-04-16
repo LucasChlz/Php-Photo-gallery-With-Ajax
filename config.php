@@ -5,6 +5,8 @@
     define('PASSWORD','');
     define('DATABASE','gallery');
 
+    define('BASE_DIR',__DIR__.'');
+
 
     $autoload = function($class)
     {
