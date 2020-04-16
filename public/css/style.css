@@ -16,6 +16,35 @@ nav {
     text-align: center;
 }
 
+footer {
+    width: 100%;
+    height: auto;
+}
+
+footer h1 {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 30px;
+  font-weight: normal;
+  color: white;
+}
+
+.btn {
+  background: white;
+  border: 0;
+  color: black;
+}
+
+.btn:hover {
+  background: rgb(15, 194, 104);
+}
+
+footer label {
+  color: white;
+  font-size: 25px;
+  text-align: left;
+}
+
 .img-fluid {
     border: 1px solid white;
     margin-bottom: 20px;
@@ -28,7 +57,7 @@ nav h1 {
 }
 
 .line {
-    width: 80%;
+    width: 90%;
     height: 5px;
     background: white;
     margin: 0 auto;
