@@ -40,7 +40,7 @@ window.onload = () => {
 
                           images.forEach((image) => {
                               box+= `<div class="col-sm-4">`;
-                                  box+= `<img src="img/${image.image}" alt="sky" class="img-fluid">`;
+                                  box+= `<img src="img/${image.image}" alt="${image.nome}" class="img-fluid">`;
                               box+= `</div>`;
                           });
 

@@ -3,6 +3,17 @@
     class Gallery
     {
 
+        public static function validImg($img) {
+            if($img['type'] == 'image/JPEG' ||
+            $img['type'] == 'image/png' ||
+            $img['type'] == 'image/jpeg' ||
+            $img['type'] == 'image/gif') {
+
+            }else {
+                return false;
+            }
+        }
+
         public static function uploadImg($img) {
             $imgType = explode('.', $img['name']);
             $imgName = uniqid().'.'.$imgType[count($imgType) - 1];
@@ -15,13 +26,17 @@
         }
 
         public function Register($name,$image) {
-            $image = Gallery::uploadImg($image);
-            $sql = MySql::connect()->prepare("INSERT INTO `images` VALUES(null,?,?)");
-
-            if($sql->execute(array($name,$image))) {
-                echo 'successfully registered';
-            }else {
+            if(Gallery::validImg($image) == false) {
                 echo 'error';
+            }else {
+                $image = Gallery::uploadImg($image);
+                $sql = MySql::connect()->prepare("INSERT INTO `images` VALUES(null,?,?)");
+
+                if($sql->execute(array($name,$image))) {
+                    echo 'successfully registered';
+                }else {
+                    echo 'error';
+                }
             }
         }
 
