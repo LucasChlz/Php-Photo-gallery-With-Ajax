@@ -1,6 +1,6 @@
 <?php
 
-    class Upload
+    class Gallery
     {
 
         public static function validImg($img) {
@@ -32,11 +32,11 @@
         }
 
         public function Register($name,$image) {
-            if(Upload::validImg($image) == false) {
+            if(Gallery::validImg($image) == false) {
                 echo 'error';
             }else {
 
-                $image = Upload::uploadImg($image);
+                $image = Gallery::uploadImg($image);
                 $sql = MySql::connect()->prepare("INSERT INTO `images` VALUES(null,?,?)");
 
                 if($sql->execute(array($name,$image))) {
