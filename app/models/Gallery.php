@@ -7,8 +7,8 @@
             if($img['type'] == 'image/JPEG' ||
             $img['type'] == 'image/png' ||
             $img['type'] == 'image/jpeg' ||
-            $img['type'] == 'image/gif') {
-
+            $img['type'] == 'image/jpg') {
+                return true;
             }else {
                 return false;
             }

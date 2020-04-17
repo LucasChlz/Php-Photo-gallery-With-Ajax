@@ -19,7 +19,12 @@ window.onload = () => {
               });
 
               success(() => {
-                  div_msg.innerHTML = 'Successfully registered';
+                  var res = xhttp.responseText;
+                  if(res == 'successfully registered') {
+                      div_msg.innerHTML = 'Successfully registered';
+                  }else if(res == 'error'){    
+                      div_msg.innerHTML = 'Error invalid image';
+                  }
                   listingImages();
               });
 
@@ -40,7 +45,8 @@ window.onload = () => {
 
                           images.forEach((image) => {
                               box+= `<div class="col-sm-4">`;
-                                  box+= `<img src="img/${image.image}" alt="${image.nome}" class="img-fluid">`;
+                                  box+= `<h1>${image.name}</h1>`;
+                                  box+= `<img src="img/${image.image}" alt="${image.name}" class="img-fluid">`;
                               box+= `</div>`;
                           });
 
